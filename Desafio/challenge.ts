@@ -10,7 +10,7 @@ const lookForPokemonByName = (name: string): Pokemon | undefined => { // tipo Po
     }
   };
 
-//console.log(lookForPokemonByName('bulbasaur'))
+console.log(lookForPokemonByName('bulbasaur'))
 
 //retornar lista que pertence a categoria do tipo que vai ser passado por parâmetro
 const listAllPokemonsByType = (type:string) : Pokemon[] =>{
@@ -26,15 +26,16 @@ const listAllPokemonsByType = (type:string) : Pokemon[] =>{
 //console.log(listAllPokemonsByType('grass'))
 
 //retorne uma array onde os nomes das categorias dos pokemons foram trocadas de inglês para português
-const changePokemonTypeNamesToPortuguese = () => {
+const changePokemonTypeNamesToPortuguese = (): void => {
     for (let i = 0; i < pokemons.length; i++) {
       for (let j = 0; j < pokemons[i].type.length; j++) {
         pokemons[i].type[j] = translatePokemonTypeNames[pokemons[i].type[j]];
       }
       console.log(pokemons[i].type);
+      
     }
   };
 
-//changePokemonTypeNamesToPortuguese()
+changePokemonTypeNamesToPortuguese()
 
 
